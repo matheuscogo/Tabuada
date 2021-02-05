@@ -1,0 +1,10 @@
+﻿CREATE TABLE usuario(
+cod serial not null PRIMARY KEY,
+nome varchar(30),
+senha varchar(10)
+);
+
+SELECT * FROM login;
+SELECT * FROM ranking;
+
+drop table login;

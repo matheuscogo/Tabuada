@@ -1,0 +1,17 @@
+﻿CREATE TABLE ranking (
+rank serial not null PRIMARY KEY,
+cod  integer not null,
+acertos integer not null,
+erros integer not null,
+foreign key (cod) references login
+);
+
+SELECT * FROM ranking;
+SELECT * FROM login;
+
+UPDATE ranking 
+
+SELECT *,(acertos*100)+(erros * (-100)) as pontos FROM ranking ORDER BY acertos desc;
+
+DROP TABLE ranking;
+DROP TABLE login;
